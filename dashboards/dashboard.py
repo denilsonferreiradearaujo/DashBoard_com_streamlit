@@ -7,8 +7,9 @@ def show_dashboard():
     st.title('Uber pickups in NYC')
 
     DATE_COLUMN = 'date/time'
-    file_path = r'C:\Users\Denilson Araújo\Desktop\Projetos_E_Cursos_Desenvolvedor\Internet_Youtube_Outros\DashBoard_Python_Asimov\uber-raw-data-sep14.csv'
-
+    # file_path = r'C:\Users\Denilson Araújo\Desktop\Projetos_E_Cursos_Desenvolvedor\Internet_Youtube_Outros\DashBoard_Python_Asimov\uber-raw-data-sep14.csv'
+    file_path = "uber-raw-data-sep14.csv"
+    
     @st.cache_data
     def load_data(nrows):
         data = pd.read_csv(file_path, nrows=nrows)
